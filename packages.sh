@@ -14,6 +14,7 @@ git clone  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic #
 git clone  https://github.com/f8q8/luci-app-autoreboot # 自动重启
 
 rm -rf .svn
+rm -rf ./*/.github
 rm -rf ./*/.git
 rm -rf ./*/.svn 
 rm -f .gitattributes .gitignore
