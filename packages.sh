@@ -1,7 +1,6 @@
 #!/bin/bash
 
 svn co https://github.com/rufengsuixing/luci-app-syncdial # 宽带多播
-svn co https://github.com/mchome/luci-app-vlmcsd # KMS激活
 svn co https://github.com/xiaorouji/openwrt-passwall passwalldep -b packages # passwall依赖
 svn co https://github.com/xiaorouji/openwrt-passwall -b luci # passwall
 svn co https://github.com/siwind/luci-app-wolplus # 网络唤醒++
