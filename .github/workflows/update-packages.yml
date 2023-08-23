@@ -51,9 +51,15 @@ jobs:
       run: |
         [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/packages
         cd $GITHUB_WORKSPACE/packages
-        git add .
-        git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-        git push --quiet "https://${{ secrets.TOKEN }}@github.com/pppoex/openwrt-packages.git"
+        if git status --porcelain | grep .; then
+          git add .
+          git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
+          git push --quiet "https://${{ secrets.TOKEN }}@github.com/pppoex/openwrt-packages.git"
+        else
+          echo "nothing to commit"
+          exit 0
+        fi || exit 0    
+        
  
 
  
