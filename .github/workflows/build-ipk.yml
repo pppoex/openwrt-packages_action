@@ -43,5 +43,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ipk
-          path: openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64/bin/targets/x86/generic/
+          path: openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64/ipk/
           if-no-files-found: error
