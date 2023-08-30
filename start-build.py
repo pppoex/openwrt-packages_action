@@ -9,13 +9,11 @@ def get_makefile_path(root_path):
                 makefile_path_list.append(os.path.join(root, file))
     return makefile_path_list
 
-print ("PATH=" + str(get_makefile_path("./")))
+print ("PATH=" + str(get_makefile_path("./package/")))
 
 # 存入变量
 Makefile_patch = []
-Makefile_patch = get_makefile_path("./")
-
-os.system("mkdir ipk")
+Makefile_patch = get_makefile_path("./package/")
 
 # 遍历所有Makefile文件,在文件位置执行 make [文件位置]/complie V=99
 for i in Makefile_patch:
