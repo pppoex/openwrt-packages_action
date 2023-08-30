@@ -29,6 +29,7 @@ jobs:
           wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/start-build.py
           wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/build.sh 
           mkdir ipk
+          chmod 777 build.sh
           python3 start-build.py
 
       - name: 利用上传工件模块上传所有ipk文件
