@@ -23,12 +23,12 @@ jobs:
           ./scripts/feeds install -a
       - name: 编译
         run: |
-          cd openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64
-          cd package/
+          cd openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64/package/
           git clone https://github.com/pppoex/openwrt-packages
           cd ..
           wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/start-build.py
           wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/build.sh 
+          mkdir ipk
           python3 start-build.py
 
       - name: 利用上传工件模块上传所有ipk文件
