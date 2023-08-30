@@ -21,6 +21,6 @@ for i in Makefile_patch:
     i = i.replace("\Makefile", "")
     i = i.replace("/Makefile", "")
     print(i)
-    print("make " + i + "/complie V=99")
-    os.system("make " + i + "/complie V=99")
+    print("sh build.sh " + i)
+    os.system("sh build.sh " + i)
 

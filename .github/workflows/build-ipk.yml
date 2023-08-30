@@ -35,7 +35,8 @@ jobs:
           cd package/
           git clone https://github.com/pppoex/openwrt-packages
           cd ..
-          wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/build.py
+          wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/start-build.py
+          wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/build.sh
           python3 build.py
 
       - name: 利用上传工件模块上传所有ipk文件
