@@ -1,0 +1,22 @@
+name: Build IPK
+
+on:
+  release:
+    types: published
+  push:
+    branches:
+      - main
+# 每天触发一次
+  schedule:
+    - cron: '0 0 * * *'
+  watch:
+    types: started
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
