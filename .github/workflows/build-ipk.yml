@@ -34,8 +34,10 @@ jobs:
           cd openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64
           cd package/
           git clone https://github.com/pppoex/openwrt-packages
-          # 枚举所有 Makefile 文件位置，并且在该位置执行 make [文件路径]/complie V=99
-          find ./ -name "Makefile" -execdir make {}\/compile V=99 \;
+          cd ..
+          wget https://raw.githubusercontent.com/pppoex/openwrt-packages_action/main/build.py
+          python3 build.py
+
       - name: 利用上传工件模块上传所有ipk文件
         uses: actions/upload-artifact@v2
         with:
