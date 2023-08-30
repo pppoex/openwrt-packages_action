@@ -22,5 +22,5 @@ for i in Makefile_patch:
     i = i.replace("/Makefile", "")
     print(i)
     print("sh build.sh " + i)
-    os.system("sh build.sh " + i + " ./ipk/")
+    os.system("./build.sh " + i + " ./ipk/")
 
