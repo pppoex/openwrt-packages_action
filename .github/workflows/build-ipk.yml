@@ -32,7 +32,7 @@ jobs:
       - name: 编译
         run: |
           cd openwrt-sdk-22.03.5-x86-generic_gcc-11.2.0_musl.Linux-x86_64
-          cd packages/
+          cd package/
           git clone https://github.com/pppoex/openwrt-packages
           # 枚举所有 Makefile 文件位置，并且在该位置执行 make [文件路径]/complie V=99
           find ./ -name "Makefile" -execdir make {}\/compile V=99 \;
