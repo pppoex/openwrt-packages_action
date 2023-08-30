@@ -15,6 +15,8 @@ print ("PATH=" + str(get_makefile_path("./")))
 Makefile_patch = []
 Makefile_patch = get_makefile_path("./")
 
+os.system("mkdir ipk")
+
 # 遍历所有Makefile文件,在文件位置执行 make [文件位置]/complie V=99
 for i in Makefile_patch:
     # 去除文件名，只保留文件路径
@@ -22,5 +24,5 @@ for i in Makefile_patch:
     i = i.replace("/Makefile", "")
     print(i)
     print("sh build.sh " + i)
-    os.system("sh build.sh " + i)
+    os.system("sh build.sh " + i + " ./ipk/")
 
