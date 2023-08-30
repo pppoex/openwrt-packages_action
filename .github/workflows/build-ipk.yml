@@ -2,8 +2,8 @@ name: Build IPK
 
 on:
 # 每天触发一次
-  schedule:
-    - cron: '0 0 * * *'
+  #schedule:
+  #  - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
