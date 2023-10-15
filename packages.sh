@@ -12,7 +12,9 @@ git clone  https://github.com/jerrykuku/luci-theme-argon # Argon主题
 git clone  https://github.com/openwrt-xiaomi/luci-app-cpufreq # CPU性能调节
 git clone  https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic # 解锁网易云
 git clone  https://github.com/f8q8/luci-app-autoreboot # 自动重启
+git clone  https://github.com/vernesong/OpenClash # OpenClash
 
+rm -rf ./*/img
 rm -rf .svn
 rm -rf ./*/.github
 rm -rf ./*/.git
